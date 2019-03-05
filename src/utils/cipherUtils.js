@@ -7,3 +7,5 @@ export const shift = (shiftBy, plainText) => plainText.toLowerCase()
                                                       .map(x => inRange(x) ? shiftNum(x, shiftBy) : x)
                                                       .map(x => String.fromCharCode(x))
                                                       .join('');
+
+export const unShift = (shiftBy, cipherText) => shift( 26 - shiftBy, cipherText);
